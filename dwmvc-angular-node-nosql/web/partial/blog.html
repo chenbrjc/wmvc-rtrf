@@ -1,0 +1,32 @@
+<div class="blocker1">
+    <h3>Topic: WMVC Real Time Reactive Fulfillment</h3>    
+</div>
+
+<div id="castingId" class="blocker2">
+    <div>
+        <h4>Post a Comment:</h4>
+    </div>
+    <form id="commentFormId">
+        <div>
+            <input type="text" style="width: 30%" name="newCommentId" placeholder="What is in your mind?" ng-model="newComment"/>
+            <button role="submit" class="btn btn-default" ng-click="addComment()"><span class="glyphicon glyphicon-plus"></span>Send</button>  
+        </div>
+    </form>
+</div>
+
+<div>
+    <h4>All Comments:</h4>
+</div>
+
+<div class="view" ng-switch on="comments.comments.length" ng-cloak>
+    <ul ng-switch-when="0">
+        <li>
+            <em>No comments yet available.  Be the first to add a comment.</em>
+        </li>
+    </ul>
+    <ul ng-switch-default>
+        <li ng-repeat="comment in comments.comments">
+            <span>{{comment.comment}} </span>
+        </li>
+    </ul>				
+</div>
