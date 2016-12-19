@@ -14,8 +14,8 @@
 4.  Navigate to \wmvc-rtrf-master\pwmvc-pusher-datachannel => npm install (as admin user).
 5.  Navigate to \wmvc-rtrf-master\pwmvc-pusher-datachannel\web =>> bower install (as admin user).
 6.  Navigate back to \wmvc-rtrf-master\pwmvc-pusher-datachannel and start Node server => node blogApp.js.
-7.  Point a blower to <a href="http://localhost:5138/index.html">here</a>
-8.  Point another browser to the <a href="http://localhost:5138/index.html">same URL</a>.
+7.  Point a blower to "http://localhost:5138/index.html".
+8.  Point another browser to the same URL.
 9.  Text entries in one browser will reflect in another right away.
 
 
