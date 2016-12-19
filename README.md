@@ -10,4 +10,4 @@ The WMVC (web-based <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2
 &nbsp;&nbsp;&nbsp;&nbsp;<b>pwmvc-pusher-datachannel:</b> A pWMVC realization based on <a href="https://angularjs.org/">AngularJS</a>, <a href="https://github.com/pusher/pusher-js">PusherJS</a>, and <a href="https://www.webrtc-experiment.com/DataChannel/">DataChannelJS</a>.
 
 
-Detailed illustration and discussion of these designs and implementations are to be introduced.
+Detailed illustration and discussion of these designs and implementations can be found in <a href="https://www.infoq.com/articles/mvc-real-time-reactive-fulfillment">this InfoQ article</a>.
