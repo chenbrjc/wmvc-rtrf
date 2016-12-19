@@ -1,0 +1,17 @@
+CREATE TABLE topics (
+  id serial,
+  topic_id bigint, 
+  comments JSON,
+  primary key (topic_id));
+  
+CREATE OR REPLACE FUNCTION proc_topics_notify_trigger() RETURNS trigger AS $$
+  DECLARE
+  BEGIN
+    PERFORM pg_notify('topics_observer', json_build_object('topic_id', NEW.topic_id, 'topic_comments', NEW.comments)::text);
+    RETURN new;
+  END;
+  $$ LANGUAGE plpgsql;
+  
+DROP TRIGGER IF EXISTS trigger_topics_notify ON topics;
+CREATE TRIGGER trigger_topics_notify AFTER INSERT OR UPDATE OR DELETE ON topics
+  FOR EACH ROW EXECUTE PROCEDURE proc_topics_notify_trigger();
